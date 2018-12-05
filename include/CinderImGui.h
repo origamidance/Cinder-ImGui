@@ -220,7 +220,7 @@ namespace ImGui {
 	// Scoped objects goodness (push the state when created and pop it when destroyed)
 
 	struct IMGUI_API ScopedWindow : public ci::Noncopyable {
-		ScopedWindow( const std::string &name = "Debug", ImGuiWindowFlags flags = 0 );
+		ScopedWindow( const std::string &name = "Debug",bool* p_open=nullptr , ImGuiWindowFlags flags = 0 );
 		~ScopedWindow();
 	};
 	struct IMGUI_API ScopedChild : public ci::Noncopyable {

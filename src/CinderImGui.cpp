@@ -1115,9 +1115,9 @@ void disconnectWindow( ci::app::WindowRef window )
 	sWindowConnections.clear();
 }
 
-ScopedWindow::ScopedWindow( const std::string &name, ImGuiWindowFlags flags)
+ScopedWindow::ScopedWindow( const std::string &name,bool* p_open, ImGuiWindowFlags flags)
 {
-	ImGui::Begin( name.c_str(), nullptr, flags );
+	ImGui::Begin( name.c_str(),p_open, flags );
 }
 ScopedWindow::~ScopedWindow()
 {
